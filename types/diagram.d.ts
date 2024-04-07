@@ -1,0 +1,3 @@
+// IType{
+//     diagram:string
+// }

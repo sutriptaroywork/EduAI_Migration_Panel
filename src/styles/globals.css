@@ -1,0 +1,270 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  color-scheme: only light;
+  scroll-behavior: smooth;
+}
+
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+  font-family: 'Hanken Grotesk', sans-serif;
+}
+
+::selection {
+  background-color: #9362f3;
+  color: #fff;
+}
+
+/* Hide scrollbar for Chrome, Safari, and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge, and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+button.active {
+  @apply text-black bg-white;
+}
+/*  Dot Flashing */
+.dot-flashing {
+  position: relative;
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 5px;
+  animation: dot-flashing 1s infinite linear alternate;
+  animation-delay: 0.5s;
+  @apply bg-gray-60 text-gray-60;
+}
+.dot-flashing::before,
+.dot-flashing::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 0;
+}
+.dot-flashing::before {
+  left: -0.6rem;
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 5px;
+  animation: dot-flashing 1s infinite alternate;
+  animation-delay: 0s;
+  @apply bg-gray-60 text-gray-60;
+}
+.dot-flashing::after {
+  left: 0.6rem;
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 5px;
+  animation: dot-flashing 1s infinite alternate;
+  animation-delay: 1s;
+  @apply bg-gray-60 text-gray-60;
+}
+
+@keyframes dot-flashing {
+  0% {
+    @apply bg-gray-60;
+  }
+  50%,
+  100% {
+    background-color: rgba(152, 128, 255, 0.2);
+  }
+}
+
+/* Define the linear gradient background */
+.container {
+  height: 70vh;
+  width: 400vw;
+  display: flex;
+  border-top: 50px white solid;
+  /*border-bottom: 50px white solid;*/
+  border-left: 100px white solid;
+}
+
+.your-div {
+  /* Set initial width */
+  width: 100px;
+
+  /* Add transition property to smoothly change the width */
+  transition: width 2s ease; /* '2s' is the duration and 'ease' is the timing function */
+}
+
+.thumbnail {
+  width: 800px;
+  color: white;
+  margin-right: 20px;
+  padding: 20px;
+}
+
+.lastContainer {
+  display: flex;
+  height: 100vh;
+  background: yellow;
+}
+
+.panel {
+  width: 100vw;
+  height: 100vh;
+}
+.red {
+  background: blue;
+}
+.red {
+  background: red;
+}
+.orange {
+  background: orange;
+}
+.purple {
+  background: purple;
+}
+.blue {
+  background-color: blue;
+}
+
+.text-move-wrapper {
+  overflow: hidden;
+  height: 100vh;
+}
+
+/* .text-move-wrapper {
+  overflow: hidden;
+  display: flex; 
+  height: 100vh;
+  justify-content: center; 
+} */
+
+.moveable-text {
+  @apply bg-primary-50;
+  width: fit-content;
+  display: flex;
+  flex-wrap: nowrap;
+  transform: translateX(100%);
+
+  /* height: 100%; */
+}
+
+.moveable-text h2 {
+  /* font-size: 20rem; */
+  font-size: 16rem;
+  flex-shrink: 0;
+  padding-right: 0.2em;
+  padding-left: 0.2em;
+  color: #fff;
+
+  margin: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  height: 100%;
+}
+
+.stepped-animation {
+  height: 100%;
+  overflow-y: scroll;
+  position: relative;
+}
+
+.single-step {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  color: '#fff';
+}
+.single-step__inner {
+  padding: 2rem;
+}
+
+/* remove upper */
+@layer base {
+  input[type='checkbox'] {
+    @apply h-[1.6rem] w-[1.6rem] cursor-pointer rounded-[4px] border-gray-40  bg-transparent shadow-none checked:outline-none hover:bg-gray-10   hover:checked:bg-primary-50 focus-visible:outline-none focus-visible:ring-primary-60 focus-visible:ring-offset-1 active:bg-primary-70 disabled:cursor-not-allowed disabled:border-gray-20 disabled:bg-gray-05 disabled:checked:border-gray-20 disabled:checked:bg-gray-20 dark:border-dark-gray-50 dark:checked:border-primary-50 dark:checked:bg-primary-50 dark:hover:bg-dark-gray-20 dark:hover:checked:border-primary-60 dark:hover:checked:bg-primary-60 dark:focus:ring-offset-black dark:focus-visible:bg-primary-50 dark:focus-visible:ring-primary-60 dark:active:bg-primary-70 dark:disabled:bg-dark-gray-05 dark:disabled:checked:border-dark-gray-30 dark:disabled:checked:bg-dark-gray-30;
+  }
+
+  input[type='radio'] {
+    @apply h-[1.6rem] w-[1.6rem] cursor-pointer bg-transparent focus:ring-offset-1 disabled:cursor-not-allowed disabled:border-gray-20 disabled:checked:border-gray-20 disabled:checked:bg-gray-20 dark:border-gray-05
+    dark:checked:border-blue-50 dark:checked:bg-blue-50 dark:hover:bg-dark-gray-30 dark:checked:hover:bg-blue-60
+    dark:disabled:checked:border-4 dark:disabled:checked:border-dark-gray-30 dark:disabled:checked:bg-transparent dark:disabled:checked:bg-none;
+  }
+
+  input[type='text'],
+  input[type='url'],
+  input[type='email'],
+  input[type='password'],
+  input[type='search'],
+  input[type='tel'],
+  input[type='number'],
+  input[type='date'],
+  input[type='month'],
+  input[type='week'],
+  input[type='time'],
+  input[type='datetime'],
+  input[type='datetime-local'],
+  input[type='area'],
+  input[type='color'] {
+    @apply h-[4.8rem] w-full rounded-[.8rem] border-gray-30 bg-white px-[1.6rem] py-[.8rem] text-gray-80  text-body-02 placeholder:text-gray-40 placeholder:text-body-02
+    hover:border-gray-40 hover:bg-white hover:shadow-gray focus:border-0 focus:outline-none focus:ring-2 focus:ring-primary-50 focus-visible:shadow-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-50 active:shadow-primary active:ring-2 active:ring-primary-50  disabled:focus-visible:ring-0 disabled:active:ring-0;
+  }
+
+  label + input[type='text'] {
+    @apply text-gray-80;
+  }
+  label + input[type='text']:disabled,
+  label {
+    @apply text-gray-40;
+  }
+
+  select {
+    @apply h-[4.8rem] w-full cursor-pointer
+     rounded-[4px] border border-gray-30 bg-transparent bg-white px-[1.2rem] py-[1.4rem]
+    text-left text-gray-80 shadow-extra-small
+                ring-offset-1 text-reg-body 
+                hover:bg-gray-05 focus:border-none           
+                focus:bg-transparent
+                focus:ring-2
+                focus:ring-primary-60
+                active:bg-gray-05  
+                disabled:cursor-not-allowed
+                disabled:bg-gray-20
+                disabled:text-gray-40
+                dark:border-dark-gray-30
+                dark:bg-dark-gray-10
+                dark:text-dark-gray-80
+                dark:hover:bg-dark-gray-20
+                dark:focus:ring-primary-50
+                dark:active:bg-dark-gray-10 dark:disabled:bg-dark-gray-10 dark:disabled:text-dark-gray-50;
+  }
+  select::placeholder {
+    @apply text-gray-40 dark:text-dark-gray-50;
+  }
+  /* .custom-select::placeholder {
+    color: #999;
+    font-style: italic;
+  } */
+  /* select > option {
+    @apply bg-white p-[4rem] text-gray-60;
+  } */
+}

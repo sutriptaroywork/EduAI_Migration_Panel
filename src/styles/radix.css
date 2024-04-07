@@ -1,0 +1,38 @@
+.trigger-variant-1 {
+  @apply flex items-center justify-start
+  rounded-[.8rem]
+  bg-transparent
+  p-[.8rem]
+  px-[1.2rem]
+  py-[1rem]
+  text-gray-60 text-sub-02 hover:bg-gray-20
+  hover:text-primary-50 data-[state=active]:border data-[state=active]:border-primary-20
+  data-[state=active]:bg-primary-05 data-[state=active]:text-primary-50  hover:data-[state=active]:bg-gray-20;
+}
+
+.trigger-variant-2 {
+  @apply bg-transparent px-[1.2rem]
+  py-[1rem] 
+  text-gray-60
+  text-med-body
+  data-[state=active]:border-separate
+  data-[state=active]:border-b-2
+  data-[state=active]:border-primary-60
+  data-[state=active]:text-primary-60
+  dark:data-[state=active]:border-primary-50
+  dark:data-[state=active]:text-primary-50;
+}
+
+.Trigger {
+  @apply text-med-body;
+}
+.Trigger[data-state='active'] {
+  @apply border-b-2 border-primary-60 text-primary-60;
+}
+.Trigger[data-state='inactive'] {
+  @apply text-gray-70 dark:text-dark-gray-70;
+}
+
+.select-item[data-highlighted] {
+  @apply bg-red-05 dark:bg-gray-90;
+}

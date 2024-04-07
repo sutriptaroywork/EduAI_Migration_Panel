@@ -1,0 +1,57 @@
+/* .text-gradient {
+  animation: slide 10s linear infinite forwards;
+  background-size: 600vw 600vw;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+@keyframes slide {
+  0% {
+    background-position-x: 0%;
+  }
+  100% {
+    background-position-x: 100%;
+  }
+} */
+
+.home-hero-text {
+  background: radial-gradient(
+    1397.24% 222.6% at 49.93% 49.99%,
+    #fff 0%,
+    rgba(255, 255, 255, 0.64) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.home-generative-text {
+  background: linear-gradient(115deg, #9362f3, #dcd1ff, #c09eff, #9362f3, #c09eff);
+  /* background: linear-gradient(110deg, #9362f3, #dcd1ff, #c09eff, #9362f3, #c09eff); */
+  /* background: linear-gradient(115deg, #4fcf70, #fad648, #a767e5, #12bcfe, #44ce7b); */
+  /* background: radial-gradient(
+    215.13% 1380.58% at 49.93% 49.99%,
+    #9362f3 0%,
+    #dcd1ff 55.21%,
+    #c09eff 100%
+  ); */
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: slide 10s linear infinite forwards;
+  background-size: 600vw 600vw;
+}
+@keyframes slide {
+  0% {
+    background-position-x: 0%;
+  }
+  100% {
+    background-position-x: 100%;
+  }
+}
+
+.benefit-text-gradient {
+  background: radial-gradient(3693.17% 57.54% at 4.08% 25%, #b484ff 0%, #dcd1ff 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

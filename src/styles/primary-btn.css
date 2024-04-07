@@ -1,0 +1,95 @@
+.login-btn {
+  z-index: 1;
+}
+.login-btn .overlay-span {
+  display: block;
+  border-radius: 50%;
+  position: absolute;
+  background-color: #000;
+  width: 0;
+  height: 0;
+  /* transition: width 0.4s ease-in-out, height 0.4s ease-in-out; */
+  transition: all 0.4s ease-in-out;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.login-btn:hover .overlay-span {
+  /* background-color: #000; */
+  /* width: btnwidth*2.25; */
+  /* width: 168px;
+  height: 90px; */
+  width: 20rem;
+  height: 10rem;
+}
+
+.login-btn-nav {
+  width: 0;
+  height: 0;
+}
+.login-btn-nav.active {
+  @apply w-full h-full transition-[width] duration-300 ease-linear;
+  /* width: 100%;
+  height: 100%; */
+}
+.login-btn-nav.active a {
+  @apply bg-white w-full h-[3.2rem]  text-black transition-transform duration-200 ease-in flex  items-center justify-center rounded-full px-[1.2rem] py-[.4rem] text-body-02 hover:bg-white hover:text-black;
+}
+.login-btn-nav.active a span {
+  @apply !inline-block;
+}
+
+.primary-btn {
+  @apply !p-[.2rem] overflow-hidden;
+
+  /* border: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 30px; */
+}
+.primary-btn div {
+  @apply rounded-full;
+  position: relative;
+  width: fit-content;
+  /* padding: 0.5rem 2rem; */
+  /* margin: 3px; */
+  color: white;
+  /* background-color: #000; */
+}
+.primary-btn:hover::before {
+  @apply bg-primary-btn-gradient rounded-full;
+
+  /* content: '';
+  display: block;
+  position: absolute;
+  height: 10rem;
+  width: 104%;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  background-image: linear-gradient(#dcd1ff 22%, #c09eff 72%, #6144bd 100%);
+  background-image: linear-gradient(#ff69b4 0%, #00d4ff 100%);
+  animation: rotate-border 1s linear infinite; */
+  content: '';
+  background-image: conic-gradient(#c09eff 20deg, transparent 120deg);
+  height: 150%;
+  width: 150%;
+  position: absolute;
+  left: -25%;
+  top: -25%;
+  animation: rotate-border 1s linear infinite;
+}
+
+@keyframes rotate-border {
+  /* 0% {
+      transform: translateX(-50%) translateY(-50%) rotate(360deg);
+    } */
+  100% {
+    /* transform: translateX(-50%) translateY(-50%) rotate(0deg); */
+
+    transform: rotate(-360deg);
+  }
+}

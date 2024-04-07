@@ -1,0 +1,125 @@
+/** Used to define container behavior: width, position: fixed etc... **/
+.Toastify__toast-container {
+  @apply !w-[40rem];
+}
+
+/** Used to define the position of the ToastContainer **/
+.Toastify__toast-container--top-left {
+}
+.Toastify__toast-container--top-center {
+}
+.Toastify__toast-container--top-right {
+}
+.Toastify__toast-container--bottom-left {
+}
+.Toastify__toast-container--bottom-center {
+}
+.Toastify__toast-container--bottom-right {
+}
+
+/** Classes for the displayed toast **/
+.Toastify__toast {
+}
+.Toastify__toast--rtl {
+}
+.Toastify__toast-body {
+}
+
+/** Used to position the icon **/
+.Toastify__toast-icon > svg {
+  @apply fill-white;
+}
+
+/** handle the notificaiton color and the text color based on the theme 
+
+Toastify__toast Toastify__toast-theme--light Toastify__toast--error
+
+**/
+
+.Toastify__toast-theme--dark {
+}
+.Toastify__toast-theme--light {
+}
+.Toastify__toast-theme--colored.Toastify__toast--default {
+}
+/**.Toastify__toast-theme--colored.Toastify__toast--info **/
+.Toastify__toast--info {
+  @apply h-[4.8rem] !min-w-[20rem] !bg-primary-60 dark:!bg-primary-50;
+}
+/**.Toastify__toast-theme--colored.Toastify__toast--success **/
+.Toastify__toast--success {
+  @apply h-[4.8rem] !min-w-[20rem] !bg-green-60 dark:!bg-green-50;
+}
+/**.Toastify__toast-theme--colored.Toastify__toast--warning **/
+.Toastify__toast--warning {
+  @apply !bg-orange-60 dark:!bg-orange-50;
+}
+/**.Toastify__toast-theme--colored.Toastify__toast--error **/
+.Toastify__toast--error {
+  @apply !bg-red-60 dark:!bg-red-50;
+}
+/*
+@apply bg-red-01 dark:text-white; !border !border-l-[4px] !border-red-60 bg-red-60 text-reg-body-sm dark:bg-red-10;*/
+
+.Toastify__progress-bar {
+}
+.Toastify__progress-bar--rtl {
+}
+.Toastify__progress-bar-theme--light {
+}
+.Toastify__progress-bar-theme--dark {
+}
+.Toastify__progress-bar--info {
+  /* @apply bg-blue-01 dark:bg-blue-10 dark:text-white; */
+}
+.Toastify__progress-bar--success {
+  /* @apply bg-green-10 dark:bg-green-10 dark:text-white; */
+}
+.Toastify__progress-bar--warning {
+  /* @apply bg-orange-01 dark:bg-orange-10 dark:text-white; */
+}
+.Toastify__progress-bar--error {
+  /* @apply bg-red-01 dark:bg-red-10 dark:text-white; */
+}
+/** colored notifications share the same progress bar color **/
+.Toastify__progress-bar-theme--colored.Toastify__progress-bar--info,
+.Toastify__progress-bar-theme--colored.Toastify__progress-bar--success,
+.Toastify__progress-bar-theme--colored.Toastify__progress-bar--warning,
+.Toastify__progress-bar-theme--colored.Toastify__progress-bar--error {
+}
+
+/** Classes for the close button. Better use your own closeButton **/
+.Toastify__close-button {
+  @apply absolute  right-[2.4rem] top-1/3;
+}
+.Toastify__close-button--default {
+}
+.Toastify__close-button > svg {
+  @apply h-[1.6rem] w-[1.6rem] !fill-white;
+}
+.Toastify__close-button:hover,
+.Toastify__close-button:focus {
+}
+
+/* for icon */
+.Toastify__toast-body {
+  @apply text-white text-med-body;
+}
+.Toastify__toast-icon.Toastify--animate-icon.Toastify__zoom-enter {
+  @apply text-white;
+}
+.Toastify__toast-body > div:last-child {
+  @apply text-white;
+}
+.Toastify__toast-theme--colored.Toastify__toast--warning
+  > .Toastify__toast-body
+  > .Toastify__toast-icon.Toastify--animate-icon.Toastify__zoom-enter {
+  @apply text-gray-100 text-med-body;
+}
+.Toastify__toast-theme--colored.Toastify__toast--warning > .Toastify__toast-body > div:last-child {
+  @apply text-gray-100;
+}
+
+.Toastify__toast-theme--colored.Toastify__toast--warning svg {
+  @apply !fill-gray-100;
+}

@@ -1,0 +1,63 @@
+.star {
+  @apply absolute left-0 top-0 w-full h-full pointer-events-none select-none;
+}
+.star1 {
+  @apply w-full h-full bg-no-repeat bg-cover;
+  /* animation-delay: 0s; */
+  animation:
+    animate 8s ease-in-out infinite,
+    4;
+}
+.star2 {
+  @apply w-full h-full bg-no-repeat bg-cover rotate-180;
+  /* animation-delay: -2s; */
+  animation:
+    animate2 8s ease-in-out -1s infinite,
+    4;
+}
+/* .star3 {
+  @apply bg-[url("/images/star1.png")] w-full h-full bg-no-repeat bg-cover;
+  animation-delay: -2s;
+} */
+/* .star4 {
+  @apply bg-[url("/images/star5.png")] w-full h-full bg-no-repeat bg-cover;
+  animation-delay: -3s;
+} */
+/* .star5 {
+  @apply bg-[url("/images/star3.png")] w-full h-full bg-no-repeat bg-cover;
+  animation-delay: -4s;
+} */
+@keyframes animate {
+  0%,
+  20%,
+  40%,
+  60%,
+  80%,
+  100% {
+    opacity: 30%;
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    opacity: 100%;
+  }
+}
+@keyframes animate2 {
+  0%,
+  20%,
+  40%,
+  60%,
+  80%,
+  100% {
+    opacity: 0;
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    opacity: 100%;
+  }
+}
